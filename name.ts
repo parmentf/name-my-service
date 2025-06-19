@@ -26,7 +26,7 @@ for await (const description of console) {
 The existing services are:
 ${existingServices}
 
-Please name the new service in JSON format:
+Please name the new service from the following description (translate it in English if necessary):
 ${description}
 `;
 
@@ -48,7 +48,18 @@ ${description}
             const request = {
                 model: 'qwen3:0.6b',
                 prompt,
-                format: 'json',
+                format: {
+                    type: 'object',
+                    properties: {
+                        name: {
+                            type: 'string',
+                        },
+                        description: {
+                            type: 'string',
+                        },
+                    },
+                    required: ['name', 'description'],
+                },
             };
 
             const response = await ollama.generate(request);
