@@ -1,0 +1,39 @@
+{ "description": "Calcul de similarité entre des métadonnées", "name": "textSimilarity"}
+{ "description": "Homogénéisation automatique de mots-clés", "name": "dataHomogenise"}
+{ "description": "Détection de résumé scientifique généré par IA", "name": "aiAbstractCheck"}
+{ "description": "Résumé automatique d’un article scientifique", "name": "textSummarize"}
+{ "description": "Extraction des références phares d’un corpus", "name": "topRefExtract"}
+{ "description": "Extraction d’entités nommées (Personnes, Localisations, Organismes et autres)", "name": "entityTag"}
+{ "description": "Association d’un identifiant ROR à une adresse d’affiliation", "name": "idRorDetect"}
+{ "description": "Détection de bruit d’un corpus", "name": "noiseDetect"}
+{ "description": "Classification en domaines scientifiques Science-Metrix", "name": "sciencemetrixClass"}
+{ "description": "Extraction de clusters d’un corpus", "name": "textClustering"}
+{ "description": "Extraction du texte à partir d’un PDF", "name": "textExtract"}
+{ "description": "Extraction de quantités", "name": "quantityExtract"}
+{ "description": "Extraction de termes d’un corpus avec TermSuite", "name": "TermSuite"}
+{ "description": "Contrôle de référence bibliographique", "name": "bibCheck"}
+{ "description": "Détection du pays d’une affiliation", "name": "countryDetect"}
+{ "description": "Extraction de financeurs dans un article", "name": "funderTag"}
+{ "description": "Extraction d’entités nommées en chimie", "name": "chemTag"}
+{ "description": "Extraction d’entités nommées de maladies", "name": "diseaseTag"}
+{ "description": "Extraction de thématiques d’un corpus (algorithme LDA)", "name": "ldaClass"}
+{ "description": "Extraction d’entités nommées en astronomie", "name": "astroTag"}
+{ "description": "Désambiguïsation d’auteurs via ORCID", "name": "authorDistinct"}
+{ "description": "Détection du statut d’une affiliation", "name": "corpoDetect"}
+{ "description": "Détection du genre de l’auteur", "name": "genderDetect"}
+{ "description": "Attribution d’identifiant(s) RNSR à une adresse (Apprentissage)", "name": "rnsrLearnDetect"}
+{ "description": "Lemmatisation de termes anglais", "name": "engLemma"}
+{ "description": "Extraction de noms d’espèces", "name": "speciesTag"}
+{ "description": "Détection d’unités CNRS", "name": "cnrsDetect"}
+{ "description": "Détection d’entités nommées dans les bulletins administratifs de l’instruction publique – Persée", "name": "baipTag"}
+{ "description": "Extraction d’entités géographiques", "name": "geoTag"}
+{ "description": "Classification dans les domaines HAL", "name": "halClass"}
+{ "description": "Enrichissement par DOI", "name": "doiEnrich"}
+{ "description": "Normalisation d’un texte ou d’un terme", "name": "textNormalize"}
+{ "description": "Traitement du langage naturel", "name": "nlpTools"}
+{ "description": "Verbalisation des préfixes de DOI", "name": "doiPublisherName"}
+{ "description": "Extraction de termes d’un texte via Teeft", "name": "Teeft"}
+{ "description": "Découpage d’une adresse", "name": "addressSplit"}
+{ "description": "Détection de la langue d’un texte", "name": "langDetect"}
+{ "description": "Attribution d’identifiant(s) RNSR à une adresse (Alignements)", "name": "rnsrRuleDetect"}
+{ "description": "Classification en domaines scientifiques Pascal-Francis", "name": "pascalFrancisClass"}

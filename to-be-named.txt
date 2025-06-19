@@ -1,0 +1,11 @@
+Extrait le texte d'un fichier PostScript.
+Donne la polarité des citations d'un article scientifique.
+Interroge la base ISTEX en langage naturel.
+Extrait les informations d'une facture APC en PDF.
+Résume un corpus de documents.
+Crée un graphe de connaissances à partir d'un texte.
+Détecte les outils que les auteurs d'un article scientifique citent et ont utilisés.
+Extrait les logiciels utilisés dans un articles scientifique.
+Nomme un nouveau service web à partir de sa description.
+Génère des termes sémantiquement proches pour améliorer une requête ISTEX.
+Génère une requête ISTEX à partir d'une requête en langage naturel.
