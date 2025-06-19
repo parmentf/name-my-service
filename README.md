@@ -120,3 +120,39 @@ $ ./name.ts < to-be-named.txt 2> /dev/null
   , "description": "Génère le graphe de citations d'un corpus de documents scientifiques."
 }
 ```
+
+Avec `gemma3:12b`:
+
+```bash
+$ time ./name.ts < to-be-named.txt 2> /dev/null
+{ "name": "postScriptExtract" , "description": "Extracts the text from a PostScript file."}
+
+{ "name": "citationPolarityCheck" , "description": "Calculates the polarity of citations from a scientific article."}
+
+{ "name": "istexQuery" , "description": "Interroge la base ISTEX en langage naturel."}
+
+{ "name": "apcInfoExtract" , "description": "Extracts information from an APC invoice in PDF."}
+
+{"name": "corpusSummarize", "description": "Résume un corpus de documents."}
+
+{ "name": "knowledgeGraphBuild" , "description": "Crée un graphe de connaissances à partir d'un texte."}
+
+{ "name": "toolCiteDetect" , "description": "Detects the tools that authors of a scientific article cite and use."}
+
+{ "name": "softwareExtract" , "description": "Extracts the software used in a scientific article."}
+
+{ "name": "serviceNameWeb", "description": "Names a new web service from its description." }
+
+{ "name": "termExpand" , "description": "Génère des termes sémantiquement proches pour améliorer une requête ISTEX."}
+
+{ "name": "istexQueryGenerate" , "description": "Génère une requête ISTEX à partir d'une requête en langage naturel."}
+
+{ "name": "citationGraphGenerate" , "description": "Génère le graphe de citations d'un corpus de documents scientifiques."}
+
+{ "name": "figureCaptionExtract" , "description": "Extracts the figure captions from a scientific article."}
+
+
+real    1m20.266s
+user    0m0.346s
+sys     0m0.298s
+```

@@ -5,7 +5,9 @@ import { Ollama } from 'ollama';
 // Chat or generate
 const chat = false;
 // const model = 'qwen3:0.6b';
-const model = 'qwen3';
+// const model = 'qwen3';
+// const model = 'gemma3:1b';
+const model = 'gemma3:12b';
 const ollama = new Ollama();
 
 const existingServices = await Bun.file('existing-services.jsonl').text();

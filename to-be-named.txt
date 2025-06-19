@@ -10,3 +10,4 @@ Nomme un nouveau service web à partir de sa description.
 Génère des termes sémantiquement proches pour améliorer une requête ISTEX.
 Génère une requête ISTEX à partir d'une requête en langage naturel.
 Génère le graphe de citations d'un corpus de documents scientifiques.
+Extrait les légendes des figures d'un article scientifique.
