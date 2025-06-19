@@ -18,6 +18,8 @@ bun install
 
 ### Examples
 
+Avec `qwen3:0.6b`:
+
 ```bash
 $ ./name.ts < to-be-named.txt 2> /dev/null
 {"name": "psExtract", "description": "Extrait le texte d'un fichier PostScript."}
@@ -48,4 +50,73 @@ $ ./name.ts < to-be-named.txt 2> /dev/null
 }
 
 {"name":"istexQuery","description":"Generates an ISTEX query from a natural language query."}
+```
+
+Avec `qwen3:8b`:
+
+```bash
+$ ./name.ts < to-be-named.txt 2> /dev/null
+{
+  "name": "psTextExtract"
+  ,
+  "description": "Extracts text from a PostScript file."
+}
+
+{
+  "name": "citePolarityCheck",
+  "description": "Calcule la polarité des citations d'un article scientifique."
+}
+
+{
+  "name": "istexNlpQuery",
+  "description": "Interroge la base ISTEX en langage naturel."
+}
+
+{
+  "name": "apcPdfExtract"
+  , "description": "Extrait les informations d'une facture APC en PDF."
+}
+
+{
+  "name": "textSummarize"
+  , "description": "Résumé automatique d’un article scientifique"
+}
+
+{
+  "name": "textGraphBuild"
+  , "description": "Crée un graphe de connaissages à partir d'un texte."
+}
+
+{
+  "name": "toolUseDetect",
+  "description": "Detects the tools cited by authors of a scientific article and used by them."
+}
+
+{
+  "name": "softwareExtract"
+  ,
+  "description": "Extracts the software used in a scientific article."
+}
+
+{
+  "name": "textNormalize",
+  "description": "Normalisation d’un texte ou d’un terme"
+}
+
+{
+  "name": "istexSynonymsGen"
+  ,
+  "description": "Génère des termes sémantiquement proches pour améliorer une requête ISTEX."
+}
+
+{
+  "name": "naturalToIstex"
+  ,
+  "description": "Génère une requête ISTEX à partir d'une requête en langage naturel."
+}
+
+{
+  "name": "citationGraphBuild"
+  , "description": "Génère le graphe de citations d'un corpus de documents scientifiques."
+}
 ```

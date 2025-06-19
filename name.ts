@@ -2,7 +2,10 @@
 
 import { Ollama } from 'ollama';
 
+// Chat or generate
 const chat = false;
+// const model = 'qwen3:0.6b';
+const model = 'qwen3';
 const ollama = new Ollama();
 
 const existingServices = await Bun.file('existing-services.jsonl').text();
@@ -33,7 +36,7 @@ ${description}
     if (description.length) {
         if (chat) {
             const request = {
-                model: 'qwen3:0.6b',
+                model,
                 messages: [
                     {
                         role: 'user',
@@ -46,7 +49,7 @@ ${description}
             console.log(response.message.content);
         } else {
             const request = {
-                model: 'qwen3:0.6b',
+                model,
                 prompt,
                 format: {
                     type: 'object',
