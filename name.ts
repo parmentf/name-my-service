@@ -7,7 +7,7 @@ const ollama = new Ollama();
 
 const existingServices = await Bun.file('existing-services.jsonl').text();
 
-process.stdout.write('description> ');
+process.stderr.write('description> ');
 for await (const description of console) {
     const prompt = `You are an expert in naming services. You have to name a new service, according to the following rules:
 - The name must be short, less than 15 characters
@@ -26,7 +26,7 @@ for await (const description of console) {
 The existing services are:
 ${existingServices}
 
-Please name the new service from the following description (translate it in English if necessary):
+Please name the new service from the following description (first translate it to English):
 ${description}
 `;
 
@@ -66,5 +66,5 @@ ${description}
             console.log(response.response);
         }
     }
-    process.stdout.write('description> ');
+    process.stderr.write('description> ');
 }
