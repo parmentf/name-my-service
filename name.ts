@@ -7,10 +7,14 @@ const chat = false;
 // const model = 'qwen3:0.6b';
 // const model = 'qwen3';
 // const model = 'gemma3:1b';
-const model = 'gemma3:12b';
+// const model = 'gemma3:12b';
+// const model = 'deepseek-r1:8b'; // Pouerk
+const model = 'phi4:latest'; // phi4:14b
 const ollama = new Ollama();
 
 const existingServices = await Bun.file('existing-services.jsonl').text();
+
+process.stderr.write("model:" + model + "\n");
 
 process.stderr.write('description> ');
 for await (const description of console) {
@@ -36,40 +40,25 @@ ${description}
 `;
 
     if (description.length) {
-        if (chat) {
-            const request = {
-                model,
-                messages: [
-                    {
-                        role: 'user',
-                        content: prompt,
+        const request = {
+            model,
+            prompt,
+            format: {
+                type: 'object',
+                properties: {
+                    name: {
+                        type: 'string',
                     },
-                ],
-            };
-
-            const response = await ollama.chat(request);
-            console.log(response.message.content);
-        } else {
-            const request = {
-                model,
-                prompt,
-                format: {
-                    type: 'object',
-                    properties: {
-                        name: {
-                            type: 'string',
-                        },
-                        description: {
-                            type: 'string',
-                        },
+                    description: {
+                        type: 'string',
                     },
-                    required: ['name', 'description'],
                 },
-            };
+                required: ['name', 'description'],
+            },
+        };
 
-            const response = await ollama.generate(request);
-            console.log(response.response);
-        }
+        const response = await ollama.generate(request);
+        console.log(response.response);
     }
     process.stderr.write('description> ');
 }

@@ -156,3 +156,62 @@ real    1m20.266s
 user    0m0.346s
 sys     0m0.298s
 ```
+
+Avec `phi4:14b`:
+
+```bash
+$ time ./name.ts < to-be-named.txt 2> /dev/null
+{"name": "postscriptExtractText"
+
+, "description": "Given the constraints and existing names, 'postscriptExtractText' effectively captures the functionality of extracting text from a PostScript file. The name is
+ concise (17 characters), uses camelCase as required, does not include special characters or numbers, and ends with a verb ('Extract'). It's unique among the listed services, ensuring it adheres to all specified rules."                                                                                                                                       }
+{"name": "citationPolarityCompute"
+
+, "description": "Calculate the sentiment of citations in a scientific article."
+
+}
+{
+  "name": "istexQuery",
+  "description": "Queries the ISTEX database using natural language."
+}
+{"name": "extractApcInfo", "description": "Extracts information from an APC invoice in PDF format."}
+
+
+{"name": "corpusSummarize"
+
+, "description": "The provided description in French is 'Résume un corpus de documents.' When translated to English, it means 'Summarizes a collection of documents.'"
+
+}
+{ "name": "knowledgeGraphCreate" , "description": "Creates a knowledge graph from text." }
+
+
+{
+  "name": "toolDetect"
+  , "description": "Detects tools that authors of a scientific paper cite and have used."
+}
+{"name": "softwareExtract", "description": "Extracts the software used in a scientific article."}
+
+
+{"name": "webServiceNameAssign"
+
+, "description": "Naming a New Web Service Based on Its Description."}
+{"name": "semanticExpandQuery", "description": "Generates semantically related terms to improve an ISTEX query."}
+
+
+{
+  "name": "nlpToIstex",
+  "description": "Generates an ISTEX query from a natural language query."
+}
+{
+  "name": "citationGraphGenerate",
+  "description": "Generates a citation graph for a collection of scientific documents."
+}
+{ "name": "legendExtract" , "description": "Extracts figure captions from a scientific article." }
+
+
+{"name": "helloWorldGreet", "description": "This service simulates a basic greeting function, often used as an introductory exercise in programming. It essentially outputs or in
+itiates a 'Hello World!' message."}                                                                                                                                              
+real    0m44.066s
+user    0m0.313s
+sys     0m0.208s
+```
