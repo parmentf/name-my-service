@@ -215,3 +215,69 @@ real    0m44.066s
 user    0m0.313s
 sys     0m0.208s
 ```
+
+Avec `llama3.2:3b`:
+
+```bash
+$ time ./name.ts < to-be-named.txt 2> /dev/null
+{
+  "name": "postscriptExtract",
+  "description": "Extracts the text from a PostScript file"
+}
+{
+  "name": "citationPolarity",
+  "description": "Calculate the polarity of citations for a scientific article."
+}
+{
+  "name": "istexQuery",
+  "description": "Interroge la base ISTEX en langage naturel."
+}
+{
+  "name": "pdfInvoiceExtract",
+  "description": "Extracts invoice information from a PDF document"
+}
+{
+  "name": "corpusSummarize",
+  "description": "Abstract a corpus of documents."
+}
+{
+  "name": "knowledgeGraphCreate",
+  "description": "Creates a knowledge graph from a text."
+}
+{
+  "name": "citationDetector",
+  "description": "This is the name of the new naming service, which detects the tools that authors of a scientific article cite and use."
+}
+{
+  "name": "softwareExtract",
+  "description": "Extrait les logiciels utilisés dans un article scientifique."
+}
+{
+  "name": "namemaker",
+  "description": "Nomme un nouveau service web à partir de sa description"
+}
+{
+  "name": "istexTermGenerate",
+  "description": "Generates semantically close terms to improve an ISTEX query."
+}
+{
+  "name": "istexQueryGenerate",
+  "description": "Generates an ISTEX query from a natural language query."
+}
+{
+  "name": "citationGraphGenerate",
+  "description": "Generates the citation graph of a scientific document corpus."
+}
+{
+  "name": "legendExtract",
+  "description": "Extracts legends of images in a scientific article."
+}
+{
+  "name": "greetWorld",
+  "description": "This service is related to greetings, similar to 'bonjour le monde'. It can be a greeting function that responds to common phrases in different languages."
+}
+
+real    0m14.332s
+user    0m0.213s
+sys     0m0.187s
+```

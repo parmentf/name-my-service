@@ -1,6 +1,9 @@
 {
   "dependencies": {
-    "@types/bun": "^1.2.16",
     "ollama": "^0.5.16"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.16",
+    "@types/node": "^24.0.3"
   }
 }

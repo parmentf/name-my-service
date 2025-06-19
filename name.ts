@@ -9,7 +9,9 @@ const chat = false;
 // const model = 'gemma3:1b';
 // const model = 'gemma3:12b';
 // const model = 'deepseek-r1:8b'; // Pouerk
-const model = 'phi4:latest'; // phi4:14b
+// const model = 'phi4:latest'; // phi4:14b
+const model = 'llama3.2:3b';
+
 const ollama = new Ollama();
 
 const existingServices = await Bun.file('existing-services.jsonl').text();
@@ -58,7 +60,7 @@ ${description}
         };
 
         const response = await ollama.generate(request);
-        console.log(response.response);
+        console.log(JSON.stringify(JSON.parse(response.response), null, 2));
     }
     process.stderr.write('description> ');
 }
