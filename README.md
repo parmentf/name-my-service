@@ -281,3 +281,69 @@ real    0m14.332s
 user    0m0.213s
 sys     0m0.187s
 ```
+
+Avec `mistral:7b`:
+
+```bash
+$ time ./name.ts < to-be-named.txt 2> /dev/null
+{
+  "name": "postScriptTextExtract",
+  "description": "Extracts text from a PostScript file"
+}
+{
+  "name": "citePolarityCheck",
+  "description": "Calculate the polarity of citations for a scientific article"
+}
+{
+  "name": "nlpIstexQuery",
+  "description": "Natural Language Query on ISTEX Database"
+}
+{
+  "name": "invoiceAPCExtract",
+  "description": "Extracts information from an APC invoice in PDF."
+}
+{
+  "name": "corpusSummarize",
+  "description": "Automatic Corpus Summary Generation"
+}
+{
+  "name": "textGraphCreate",
+  "description": "Generate a knowledge graph from text"
+}
+{
+  "name": "toolCitationDetect",
+  "description": "Detects the tools that authors of a scientific article have cited and used"
+}
+{
+  "name": "softwareExtract",
+  "description": "Extracts the software used in a scientific article."
+}
+{
+  "name": "webNameDetect",
+  "description": "Identification d'un domaine de nom de domaine unique pour un site Web"
+}
+{
+  "name": "semRelate",
+  "description": "Generates semantically related terms to improve an ISTEX query"
+}
+{
+  "name": "naturalLanguageIstexQuery",
+  "description": "Generates an ISTEX query from a natural language query"
+}
+{
+  "name": "citationGraphGenerate",
+  "description": "Generates a citation graph of a scientific document corpus."
+}
+{
+  "name": "figureLegendExtract",
+  "description": "Extracts the legends of figures from a scientific article."
+}
+{
+  "name": "greetWorldCheck",
+  "description": "Détection du message de salutation 'Bonjour le monde' dans un corpus"
+}
+
+real    0m15.426s
+user    0m0.250s
+sys     0m0.178s
+```

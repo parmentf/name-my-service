@@ -10,7 +10,8 @@ const chat = false;
 // const model = 'gemma3:12b';
 // const model = 'deepseek-r1:8b'; // Pouerk
 // const model = 'phi4:latest'; // phi4:14b
-const model = 'llama3.2:3b';
+// const model = 'llama3.2:3b';
+const model = 'mistral:7b';
 
 const ollama = new Ollama();
 
