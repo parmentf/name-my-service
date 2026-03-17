@@ -1,23 +1,22 @@
 #!/usr/bin/env bun
 
+import { zodResponseFormat } from 'openai/helpers/zod.mjs';
 import OpenAI from 'openai';
+import { z } from 'zod';
 
 // Chat or generate
 const chat = false;
-// const model = 'qwen3:0.6b';
-// const model = 'qwen3';
-// const model = 'gemma3:1b';
-// const model = 'gemma3:12b';
-// const model = 'deepseek-r1:8b'; // Pouerk
-// const model = 'phi4:latest'; // phi4:14b
-// const model = 'llama3.2:3b';
-// const model = 'mistral:7b';
 const model = 'mistral-small-3.2-24b'; // Mistral 3.2 24b / ILAAS
 
 // const ollama = new Ollama();
 const client = new OpenAI({
     apiKey: Bun.env.ILAAS_API_KEY,
     baseURL: Bun.env.ILAAS_API_URL,
+});
+
+const responseSchema = z.object({
+    name: z.string(),
+    description: z.string(),
 });
 
 const existingServices = await Bun.file('existing-services.jsonl').text();
@@ -48,28 +47,12 @@ ${description}
 `;
 
     if (description.length) {
-        // const request = {
-        //     model,
-        //     prompt,
-        //     format: {
-        //         type: 'object',
-        //         properties: {
-        //             name: {
-        //                 type: 'string',
-        //             },
-        //             description: {
-        //                 type: 'string',
-        //             },
-        //         },
-        //         required: ['name', 'description'],
-        //     },
-        // };
-
         const response = await client.chat.completions.create({
             model,
             messages: [{ role: 'user', content: prompt }],
             temperature: 0.1,
             stream: false,
+            response_format: zodResponseFormat(responseSchema, 'json'),
         });
         console.log(response.choices[0].message.content);
     }
