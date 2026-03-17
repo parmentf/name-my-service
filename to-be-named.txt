@@ -12,3 +12,4 @@ Génère une requête ISTEX à partir d'une requête en langage naturel.
 Génère le graphe de citations d'un corpus de documents scientifiques.
 Extrait les légendes des figures d'un article scientifique.
 Dit « bonjour le monde ».
+Crée des embeddings pour un petit texte.

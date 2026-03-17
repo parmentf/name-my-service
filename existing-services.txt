@@ -1,0 +1,39 @@
+textSimilarity - Calcul de similarité entre des métadonnées
+dataHomogenise - Homogénéisation automatique de mots-clés
+aiAbstractCheck - Détection de résumé scientifique généré par IA
+textSummarize - Résumé automatique d’un article scientifique
+topRefExtract - Extraction des références phares d’un corpus
+entityTag - Extraction d’entités nommées (Personnes, Localisations, Organismes et autres)
+idRorDetect - Association d’un identifiant ROR à une adresse d’affiliation
+noiseDetect - Détection de bruit d’un corpus
+sciencemetrixClass - Classification en domaines scientifiques Science-Metrix
+textClustering - Extraction de clusters d’un corpus
+textExtract - Extraction du texte à partir d’un PDF
+quantityExtract - Extraction de quantités
+TermSuite - Extraction de termes d’un corpus avec TermSuite
+bibCheck - Contrôle de référence bibliographique
+countryDetect - Détection du pays d’une affiliation
+funderTag - Extraction de financeurs dans un article
+chemTag - Extraction d’entités nommées en chimie
+diseaseTag - Extraction d’entités nommées de maladies
+ldaClass - Extraction de thématiques d’un corpus (algorithme LDA)
+astroTag - Extraction d’entités nommées en astronomie
+authorDistinct - Désambiguïsation d’auteurs via ORCID
+corpoDetect - Détection du statut d’une affiliation
+genderDetect - Détection du genre de l’auteur
+rnsrLearnDetect - Attribution d’identifiant(s) RNSR à une adresse (Apprentissage)
+engLemma - Lemmatisation de termes anglais
+speciesTag - Extraction de noms d’espèces
+cnrsDetect - Détection d’unités CNRS
+baipTag - Détection d’entités nommées dans les bulletins administratifs de l’instruction publique – Persée
+geoTag - Extraction d’entités géographiques
+halClass - Classification dans les domaines HAL
+doiEnrich - Enrichissement par DOI
+textNormalize - Normalisation d’un texte ou d’un terme
+nlpTools - Traitement du langage naturel
+doiPublisherName - Verbalisation des préfixes de DOI
+Teeft - Extraction de termes d’un texte via Teeft
+addressSplit - Découpage d’une adresse
+langDetect - Détection de la langue d’un texte
+rnsrRuleDetect - Attribution d’identifiant(s) RNSR à une adresse (Alignements)
+pascalFrancisClass - Classification en domaines scientifiques Pascal-Francis
