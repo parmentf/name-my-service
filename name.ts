@@ -8,7 +8,6 @@ import { z } from 'zod';
 const chat = false;
 const model = 'mistral-small-3.2-24b'; // Mistral 3.2 24b / ILAAS
 
-// const ollama = new Ollama();
 const client = new OpenAI({
     apiKey: Bun.env.ILAAS_API_KEY,
     baseURL: Bun.env.ILAAS_API_URL,
