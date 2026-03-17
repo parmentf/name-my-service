@@ -55,24 +55,7 @@ $ ./name.ts < to-be-named.txt 2> /dev/null
 Avec `qwen3:8b`:
 
 ```bash
-$ ./name.ts < to-be-named.txt 2> /dev/null        // const request = {
-        //     model,
-        //     prompt,
-        //     format: {
-        //         type: 'object',
-        //         properties: {
-        //             name: {
-        //                 type: 'string',
-        //             },
-        //             description: {
-        //                 type: 'string',
-        //             },
-        //         },
-        //         required: ['name', 'description'],
-        //     },
-        // };
-
-
+$ ./name.ts < to-be-named.txt 2> /dev/null
 {
   "name": "psTextExtract"
   ,
