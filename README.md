@@ -55,7 +55,24 @@ $ ./name.ts < to-be-named.txt 2> /dev/null
 Avec `qwen3:8b`:
 
 ```bash
-$ ./name.ts < to-be-named.txt 2> /dev/null
+$ ./name.ts < to-be-named.txt 2> /dev/null        // const request = {
+        //     model,
+        //     prompt,
+        //     format: {
+        //         type: 'object',
+        //         properties: {
+        //             name: {
+        //                 type: 'string',
+        //             },
+        //             description: {
+        //                 type: 'string',
+        //             },
+        //         },
+        //         required: ['name', 'description'],
+        //     },
+        // };
+
+
 {
   "name": "psTextExtract"
   ,
@@ -347,3 +364,28 @@ real    0m15.426s
 user    0m0.250s
 sys     0m0.178s
 ```
+
+Avec `mistral-small-3.2-24b` (ILAAS)
+
+```bash
+$ time ./name.ts < to-be-named.txt 2> /dev/null
+{"name": "psTextExtract" , "description": "Extracts text from a PostScript file."}
+{"name": "citationPolarity" , "description": "Calculate the polarity of citations in a scientific article."}
+{"name": "istexQuery" , "description": "Query the ISTEX database using natural language."}
+{"name": "apcInvoiceParse" , "description": "Extracts information from an APC invoice in PDF format."}
+{"name": "corpusSummarize" , "description": "Summarize a corpus of documents."}
+{"name": "knowledgeGraphBuild" , "description": "Create a knowledge graph from text."}
+{"name": "toolDetect" , "description": "Detects the tools that authors of a scientific article cite and have used."}
+{"name": "softwareExtract", "description": "Extracts the software used in a scientific article."}
+{ "name": "webName"  , "description": "Nomme un nouveau service web à partir de sa description."  }
+{ "name": "queryExpand" , "description": "Generate semantically close terms to improve an ISTEX query" }
+{"name": "istexQueryBuild" , "description": "Generate an ISTEX query from a natural language query."}
+{"name": "citationGraphBuild" , "description": "Generate the citation graph of a scientific document corpus."}
+{"name": "figureLegendExtract" , "description": "Extracts figure legends from a scientific article."}
+{ "name": "helloWorld" , "description": "Prints 'Hello World' as a greeting" }
+{"name": "textEmbed", "description": "Creates embeddings for a small text."}
+0.55s user 0.30s system 9% cpu 8.876 total
+```
+
+> [!NOTE]  
+> Pour utiliser ILAAS, il faut créer un fichier `.env` contenant `ILAAS_API_KEY` et `ILAAS_API_URL`.
