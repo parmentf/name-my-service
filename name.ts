@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 
-import { Ollama } from 'ollama';
+import OpenAI from 'openai';
 
 // Chat or generate
 const chat = false;
@@ -11,13 +11,18 @@ const chat = false;
 // const model = 'deepseek-r1:8b'; // Pouerk
 // const model = 'phi4:latest'; // phi4:14b
 // const model = 'llama3.2:3b';
-const model = 'mistral:7b';
+// const model = 'mistral:7b';
+const model = 'mistral-small-3.2-24b'; // Mistral 3.2 24b / ILAAS
 
-const ollama = new Ollama();
+// const ollama = new Ollama();
+const client = new OpenAI({
+    apiKey: Bun.env.ILAAS_API_KEY,
+    baseURL: Bun.env.ILAAS_API_URL,
+});
 
 const existingServices = await Bun.file('existing-services.jsonl').text();
 
-process.stderr.write("model:" + model + "\n");
+process.stderr.write('model:' + model + '\n');
 
 process.stderr.write('description> ');
 for await (const description of console) {
@@ -43,25 +48,30 @@ ${description}
 `;
 
     if (description.length) {
-        const request = {
-            model,
-            prompt,
-            format: {
-                type: 'object',
-                properties: {
-                    name: {
-                        type: 'string',
-                    },
-                    description: {
-                        type: 'string',
-                    },
-                },
-                required: ['name', 'description'],
-            },
-        };
+        // const request = {
+        //     model,
+        //     prompt,
+        //     format: {
+        //         type: 'object',
+        //         properties: {
+        //             name: {
+        //                 type: 'string',
+        //             },
+        //             description: {
+        //                 type: 'string',
+        //             },
+        //         },
+        //         required: ['name', 'description'],
+        //     },
+        // };
 
-        const response = await ollama.generate(request);
-        console.log(JSON.stringify(JSON.parse(response.response), null, 2));
+        const response = await client.chat.completions.create({
+            model,
+            messages: [{ role: 'user', content: prompt }],
+            temperature: 0.1,
+            stream: false,
+        });
+        console.log(response.choices[0].message.content);
     }
     process.stderr.write('description> ');
 }

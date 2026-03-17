@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "ollama": "^0.5.16"
+    "openai": "^6.31.0"
   },
   "devDependencies": {
     "@types/bun": "^1.2.16",
